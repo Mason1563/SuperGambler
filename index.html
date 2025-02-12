@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+
+<html style="background: #ffffff; font-family: sans-serif;"Lang = "en">
+<body>
+
+    <h2 style="align-items: center;">
+        <label style = "color: black;" for="name">Numbers 1- 6</label>
+    </h2>
+<h1 style="align-items: center;">
+
+    <label style="color: #000000;"for="name">Number:</label>
+    <input type="number" id="name" name="name" min="1" max="6">
+    <button onclick="saveNumber()">Submit</button>
+        
+    <img src="squidy.jpg" height="150" title="Soooo Sigma" style="align-items: end; width: 100% height 100%; display: flex; justify-content: center;">
+
+    <p id="one"></p>
+    <p id="result"></p>
+
+    
+    <button style=" width: 25%;" onclick="random()">Gamble!</button>
+    
+    <script style="color: rgb(0, 0, 0)">
+
+     let submittedNumber = null;
+
+     function saveNumber(){
+    
+        let input = document.getElementById("name").value;
+        if (input >= 1 && input <= 6 ){
+          submittedNumber = parseInt(input);
+        } else {
+          alert("Please enter a number between 1 and 6");
+         }
+    }
+
+    function random() {
+        if (submittedNumber === null) {
+            document.getElementById("result").innerHTML = "Please type a number 1-6 and click the submit button"
+            return;
+        }
+            let randomNumber = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("one").innerHTML = "Rolled: " + randomNumber;
+
+            if (randomNumber === submittedNumber) {
+                document.getElementById("result").innerHTML = "<span style='color: green; font-weight: bold;'>You Won!</span>";
+            }else {
+                document.getElementById("result").innerHTML = "<span style='color: red; font-weight: bold;'>You lost...</span>";
+            }
+        
+    }
+    </script>
+</h1>
+</body>
+</html>
+
+
