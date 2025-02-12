@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+
+<html style="background: #ffffff; font-family: sans-serif;"Lang = "en">
+<body>
+<h1 style="align-items: center;">
+
+    <label style="color: #000000;"for="name">Number:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Submit">
+        
+    <img src="squidy.jpg" height="150" title="Soooo Sigma" style="align-items: end; width: 100% height 100%; display: flex; justify-content: center;">
+
+
+    <p id="one"></p>
+    <button style=" width: 25%;" onclick="random()">Gamble!</button>
+    
+    <script style="color: rgb(0, 0, 0)">
+     function random(){
+    
+    document.getElementById("one").innerHTML = Math.floor(Math.random() * 6);
+    }
+    </script>
+</h1>
+</body>
+</html>
+
+
